@@ -52,7 +52,7 @@ def Upscale(Surface):
 			PixelImage2=GlowImage.copy()
 			PixelImage2.fill(Surface.get_at((x,y)))
 			PixelImage2.blit(GlowImage,(0,0),special_flags=pygame.BLEND_MULT)
-			BigSurface.blit(PixelImage2,(X-6,Y-6),special_flags=pygame.BLEND_ADD)
+			BigSurface.blit(PixelImage2,(X-Offset[0],Y-Offset[1]),special_flags=pygame.BLEND_ADD)
 
 	#Function returns the upscaled image
 	return BigSurface
